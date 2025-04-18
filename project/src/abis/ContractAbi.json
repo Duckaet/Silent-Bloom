@@ -1,0 +1,57 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "diagnoses",
+      "outputs": [
+        { "internalType": "string", "name": "imageHash", "type": "string" },
+        { "internalType": "string", "name": "prediction", "type": "string" },
+        { "internalType": "uint8", "name": "confidenceScore", "type": "uint8" },
+        { "internalType": "string", "name": "modelVersion", "type": "string" },
+        { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+        { "internalType": "string", "name": "diagnosedBy", "type": "string" }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllDiagnoses",
+      "outputs": [
+        {
+          "components": [
+            { "internalType": "string", "name": "imageHash", "type": "string" },
+            { "internalType": "string", "name": "prediction", "type": "string" },
+            { "internalType": "uint8", "name": "confidenceScore", "type": "uint8" },
+            { "internalType": "string", "name": "modelVersion", "type": "string" },
+            { "internalType": "uint256", "name": "timestamp", "type": "uint256" },
+            { "internalType": "string", "name": "diagnosedBy", "type": "string" }
+          ],
+          "internalType": "struct CancerDiagnosisLog.Diagnosis[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        { "internalType": "string", "name": "_imageHash", "type": "string" },
+        { "internalType": "string", "name": "_prediction", "type": "string" },
+        { "internalType": "uint8", "name": "_confidenceScore", "type": "uint8" },
+        { "internalType": "string", "name": "_modelVersion", "type": "string" },
+        { "internalType": "string", "name": "_diagnosedBy", "type": "string" }
+      ],
+      "name": "storeDiagnosis",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+  
